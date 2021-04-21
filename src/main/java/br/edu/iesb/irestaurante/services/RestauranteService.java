@@ -1,6 +1,7 @@
 package br.edu.iesb.irestaurante.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,6 +19,11 @@ public class RestauranteService {
 //	Metodo que me retornará todos obejetos da classe restaurante
 	public List<Restaurante> findAll(){
 		return repo.findAll();
+	}
+//	Metoddo para busccar os restaurantes pelo id deles
+	public Restaurante findById(String id) {
+		Optional<Restaurante> obj = repo.findById(id);
+		return obj.orElseThrow(() -> new ObjectNotFoundException("Restaurante nao Encontrado"));
 	}
 
 }
