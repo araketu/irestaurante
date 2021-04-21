@@ -25,7 +25,7 @@ public class RestauDTO implements Serializable {
 		
 	}
 	
-//	Instancia um Restaurante Padrao DTO por meio de um objeto Restaurante
+//	Instancia um Restaurante Padrao DTO por meio de um objeto classe Restaurante - poli 
 	public RestauDTO(Restaurante obj) {
 		id = obj.getId();
 		nome = obj.getNome();
