@@ -52,6 +52,14 @@ public class Instantiation implements CommandLineRunner {
 		restauRepository.saveAll(Arrays.asList(careca, generica, ducheff, cib));
 		cardapioRepository.saveAll(Arrays.asList(cardapiocareca, cardapiocarec1, cardapiogenerica,cardapioducheff, cardapiocib));
 		
+		
+		careca.getCardapios().addAll(Arrays.asList(cardapiocareca,cardapiocarec1));	
+		generica.getCardapios().addAll(Arrays.asList(cardapiogenerica));
+		ducheff.getCardapios().addAll(Arrays.asList(cardapioducheff));
+		cib.getCardapios().addAll(Arrays.asList(cardapiocib));
+		
+		restauRepository.saveAll(Arrays.asList(careca, generica, ducheff, cib));
+		
 	}
 
 }

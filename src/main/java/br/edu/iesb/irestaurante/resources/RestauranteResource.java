@@ -8,13 +8,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import br.edu.iesb.irestaurante.domain.Cardapio;
 import br.edu.iesb.irestaurante.domain.Restaurante;
 import br.edu.iesb.irestaurante.dto.RestauDTO;
 import br.edu.iesb.irestaurante.services.RestauranteService;
@@ -73,6 +73,12 @@ public class RestauranteResource {
 		
 	}
 	
+	@RequestMapping(value="/{id}/cardapio", method=RequestMethod.GET)
+	public ResponseEntity<List<Cardapio>> findCardapio(@PathVariable String id){
+		
+		Restaurante obj = service.findById(id);
+		return ResponseEntity.ok().body(obj.getCardapios());		
+	}
 	
 	
 

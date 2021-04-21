@@ -1,8 +1,11 @@
 package br.edu.iesb.irestaurante.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 
@@ -27,6 +30,9 @@ public class Restaurante implements Serializable {
 	private String bairro;
 	private String endereco;
 	private String tipocomida;
+	
+	@DBRef (lazy=true) // Ao carregar um restaurante garante que nao carregara automaticamente o cardapio só quando acessa-los
+	private List<Cardapio> cardapios = new ArrayList<>();
 	
 
 // Constrututor - Um método com o mesmo nome da classe
@@ -100,7 +106,12 @@ public class Restaurante implements Serializable {
 	public void setTipocomida(String tipocomida) {
 		this.tipocomida = tipocomida;
 	}	
-	
+	public List<Cardapio> getCardapios() {
+		return cardapios;
+	}
+	public void setCardapios(List<Cardapio> cardapios) {
+		this.cardapios = cardapios;
+	}
 	
 	
 //	 Método de comparacao dos obejetos pelo atributo ID
@@ -130,6 +141,8 @@ public class Restaurante implements Serializable {
 			return false;
 		return true;
 	}
+
+
 		
 }	
 	
