@@ -2,16 +2,23 @@ package br.edu.iesb.irestaurante.domain;
 
 import java.io.Serializable;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 
 //  Criando a Classe Restaurante e seus respectivos atributos 
 //  Serializable permitea covnersão da informacao em bits
 
+@Document(collection = "POO")
+//Mostra para o banco qual a colecao no banco voce esta referenciando
 public class Restaurante implements Serializable {
 	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	
+	@Id
 	private String id;
 	private String nome;
 	private String email;
