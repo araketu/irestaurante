@@ -16,7 +16,7 @@
 
 ## Endpoints
 1. GET - http://localhost:8080/restaurantes/ - Retorna restaurantes
-2. POST - http://localhost:8080/restaurantes/ - Retorna o Endereço que foi salvo
+2. POST - http://localhost:8080/restaurantes/ - Salva um novo restaurante e retorna o Endereço que foi salvo
 3. DELETE - http://localhost:8080/restaurantes/{id} - Deleta um Restaurante por ID
 4. Put - http://localhost:8080/restaurantes/{id} - Atuliza as informacoes do restaurante
 5. GET - http://localhost:8080/cardapios/{id} - Retorna um item do cardapio pelo ID
