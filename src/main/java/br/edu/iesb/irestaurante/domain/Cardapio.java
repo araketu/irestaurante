@@ -1,9 +1,14 @@
 package br.edu.iesb.irestaurante.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import br.edu.iesb.irestaurante.dto.AvaliacaoDTO;
+import br.edu.iesb.irestaurante.dto.ClienteDTO;
 
 
 @Document
@@ -20,6 +25,9 @@ public class Cardapio implements Serializable {
 	private double preco;
 	private String body;
 	private Restaurante author;
+	
+	private List<AvaliacaoDTO> avaliacoes = new ArrayList<>();
+	
 	
 	
 	public Cardapio() {
@@ -84,6 +92,15 @@ public class Cardapio implements Serializable {
 		this.author = author;
 	}
 
+	public List<AvaliacaoDTO> getAvaliacoes() {
+		return avaliacoes;
+	}
+
+
+	public void setAvaliacoes(List<AvaliacaoDTO> avaliacoes) {
+		this.avaliacoes = avaliacoes;
+	}
+
 
 	@Override
 	public int hashCode() {
@@ -110,6 +127,9 @@ public class Cardapio implements Serializable {
 			return false;
 		return true;
 	}
+
+
+
 
 
 

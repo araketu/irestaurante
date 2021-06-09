@@ -14,11 +14,11 @@ public class RestauDTO implements Serializable {
 	
 	private String id;
 	private String nome;
-	private String email;
-	private String numero;
+//	private String email;
+//	private String numero;
 	private String cidade;
 	private String bairro;
-	private String endereco;
+//	private String endereco;
 	private String tipocomida;
 	
 	public RestauDTO() {
