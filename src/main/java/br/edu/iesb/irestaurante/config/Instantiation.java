@@ -68,7 +68,8 @@ public class Instantiation implements CommandLineRunner {
 		AvaliacaoDTO a5 = new AvaliacaoDTO("Perfeita! só podia ser mais barata","07/06/2021",new ClienteDTO(c2));
 		AvaliacaoDTO a6 = new AvaliacaoDTO("Combinação perfeita de valores","01/06/2021",new ClienteDTO(c3));
 		
-
+		cardapiocarec1.getAvaliacoes().addAll(Arrays.asList(a1,a2,a3));
+		cardapioducheff.getAvaliacoes().addAll(Arrays.asList(a4,a5,a6));
 		
 		// Salva os novos restaurantes e cardapios no banco
 		clienteRepository.saveAll(Arrays.asList(c1,c2,c3));
@@ -82,9 +83,7 @@ public class Instantiation implements CommandLineRunner {
 		cib.getCardapios().addAll(Arrays.asList(cardapiocib));
 		
 		
-		cardapiocarec1.getAvaliacoes().addAll(Arrays.asList(a1,a2,a3));
-		cardapioducheff.getAvaliacoes().addAll(Arrays.asList(a4,a5,a6));
-		
+	
 		restauRepository.saveAll(Arrays.asList(careca, generica, ducheff, cib));
 		
 	}
