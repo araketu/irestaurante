@@ -24,8 +24,8 @@
 7. GET - http://localhost:8080/clientes/ - Retorna todos os clientes
 8. host:8080/swagger-ui.html - Retorna todos os end points
 
-##Heroku
-https://poo-irestaurante.herokuapp.com/  
+## Heroku
+1. https://poo-irestaurante.herokuapp.com/  
 
 Integrantes do Grupo |Matricula
 -------|------:
