@@ -18,12 +18,14 @@
 1. GET - http://localhost:8080/restaurantes/ - Retorna restaurantes, seus pratos e as avaliações por prato
 2. POST - http://localhost:8080/restaurantes/ - Salva um novo restaurante e retorna o Endereço que foi salvo
 3. DELETE - http://localhost:8080/restaurantes/{id} - Deleta um Restaurante por ID
-4. Put - http://localhost:8080/restaurantes/{id} - Atuliza as informacoes do restaurante
+4. Put - http://localhost:8080/restaurantes/{id} - Atualiza as informacoes do restaurante
 5. GET - http://localhost:8080/cardapios/{id} - Retorna um item do cardapio pelo ID
-6. GET - http://localhost:8080/cardapios/buscaporcomida?text={palavra para pesquisar} - Busca uma comida no cardapios e volta em qual restaurante tem ele
+6. GET - http://localhost:8080/cardapios/buscaporcomida?text={ palavra para pesquisar } - Busca uma comida no cardapios e volta em qual restaurante tem ele
 7. GET - http://localhost:8080/clientes/ - Retorna todos os clientes
 8. host:8080/swagger-ui.html - Retorna todos os end points
 
+##Heroku
+https://poo-irestaurante.herokuapp.com/  
 
 Integrantes do Grupo |Matricula
 -------|------:
