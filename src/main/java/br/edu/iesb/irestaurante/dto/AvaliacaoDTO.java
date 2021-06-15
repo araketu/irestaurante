@@ -1,9 +1,8 @@
 package br.edu.iesb.irestaurante.dto;
 
 import java.io.Serializable;
-import java.util.List;
 
-import br.edu.iesb.irestaurante.domain.Restaurante;
+
 
 public class AvaliacaoDTO implements Serializable {
 	

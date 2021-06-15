@@ -8,7 +8,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import br.edu.iesb.irestaurante.dto.AvaliacaoDTO;
-import br.edu.iesb.irestaurante.dto.ClienteDTO;
+
 
 
 @Document
