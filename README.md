@@ -22,6 +22,7 @@
 5. GET - http://localhost:8080/cardapios/{id} - Retorna um item do cardapio pelo ID
 6. GET - http://localhost:8080/cardapios/buscaporcomida?text={palavra para pesquisar} - Busca uma comida no cardapios e volta em qual restaurante tem ele
 7. GET - http://localhost:8080/clientes/ - Retorna todos os clientes
+8. host:8080/swagger-ui.html - Retorna todos os end points
 
 
 Integrantes do Grupo |Matricula
